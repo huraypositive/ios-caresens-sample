@@ -28,19 +28,17 @@ class ViewController: UIViewController,DeviceContextDelegate,UITableViewDelegate
     
     //MainView
     @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var deviceNameLabel: UILabel!
-    @IBOutlet weak var deviceSNLabel: UILabel!
-    @IBOutlet weak var deviceVersionLabel: UILabel!
-    @IBOutlet weak var totalCountLabel: UILabel!
-    
-    //SubView
-    @IBOutlet weak var resultTable: UITableView!
     
     //MenuView
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var downloadAllButton: UIButton!
     @IBOutlet weak var downloadAfterButton: UIButton!
     @IBOutlet weak var seqNumTextField: UITextField!
+    @IBOutlet weak var deviceNameLabel: UILabel!
+    @IBOutlet weak var deviceSNLabel: UILabel!
+    @IBOutlet weak var deviceVersionLabel: UILabel!
+    @IBOutlet weak var totalCountLabel: UILabel!
+    @IBOutlet weak var resultTable: UITableView!
     
     //DeviceListView
     @IBOutlet weak var deviceListView: UIView!
@@ -85,7 +83,7 @@ class ViewController: UIViewController,DeviceContextDelegate,UITableViewDelegate
         self.deviceListTable.delegate = self
         self.deviceListTable.dataSource = self
 
-        self.changView(.view_init)
+        self.changeView(.view_init)
         self.readPairedDevices()
     }
     
@@ -116,7 +114,7 @@ class ViewController: UIViewController,DeviceContextDelegate,UITableViewDelegate
             if self.pairedDevices.count > 0 {
                 for item in self.pairedDevices {
                     if devicename.identifier.uuidString == item {
-                        self.changView(.view_menu)
+                        self.changeView(.view_menu)
                         currentDevice = deviceDic
                         
                         contextDelegate?.connectDevice(currentDevice["peripheral"] as? CBPeripheral, with:call_with_idle , isMgdlUnit: false)
@@ -160,7 +158,7 @@ class ViewController: UIViewController,DeviceContextDelegate,UITableViewDelegate
     func sendTotalCount(_ totalCountOfData: UInt16) {
         debugPrint("sendTotalCount---->\(totalCountOfData)")
         self.totalCountLabel.text = "\(totalCountOfData)"
-        self.changView(.view_result)
+        self.changeView(.view_result)
     }
     
     func sendGlucose(_ resultString: String!) {
@@ -191,10 +189,10 @@ class ViewController: UIViewController,DeviceContextDelegate,UITableViewDelegate
         contextDelegate?.delegate = nil
         if self.stopScanButton.titleLabel?.text == Constants.disconnect{
             if currentViewState == .view_menu || isClickedDisconnectButton == true{
-                self.changView(.view_init)
+                self.changeView(.view_init)
                 isClickedDisconnectButton = false
             }else{
-                self.changView(.view_disconnect)
+                self.changeView(.view_disconnect)
             }
         }
     }
@@ -220,7 +218,7 @@ class ViewController: UIViewController,DeviceContextDelegate,UITableViewDelegate
     
     //MARK: - ButtonAction
     @IBAction func startScanAction(_ sender: Any) {
-        self.changView(.view_device_list)
+        self.changeView(.view_device_list)
         contextDelegate?.delegate = self
         self.contextDelegate?.startScan()
     }
@@ -228,19 +226,20 @@ class ViewController: UIViewController,DeviceContextDelegate,UITableViewDelegate
     @IBAction func stopScanAction(_ sender: Any) {
         if self.stopScanButton.titleLabel?.text == Constants.disconnect{
             if self.deviceVersionLabel.text == "-"{
-                self.changView(.view_init)
+                self.changeView(.view_init)
             }else{
                 self.connect(toDevice: call_with_disconnect)
                 self.isClickedDisconnectButton = true
+                self.changeView(.view_init)
             }
         }else{
             self.contextDelegate?.stopScan()
-            self.changView(.view_init)
+            self.changeView(.view_init)
         }
     }
     @IBAction func downloadAllAction(_ sender: Any) {
         self.connect(toDevice: call_with_download_all)
-        self.changView(.view_result)
+        self.changeView(.view_result)
     }
     
     @IBAction func downloadAfterAction(_ sender: Any) {
@@ -257,16 +256,18 @@ class ViewController: UIViewController,DeviceContextDelegate,UITableViewDelegate
             self.present(alert, animated: true, completion: nil)
         }else{
             //textField is not empty
-            self.changView(.view_result)
+            self.changeView(.view_result)
             self.connect(toDevice: call_with_download_after)
         }
+        
+        self.seqNumTextField.isHidden = true
     }
 }
 
 //MARK: - View
 extension ViewController{
     
-    func changView(_ state:VIEW_STATE){
+    func changeView(_ state:VIEW_STATE){
         switch state{
         case .view_init:
             self.deviceListTable.isHidden = true
@@ -278,6 +279,7 @@ extension ViewController{
             self.currentDevice = [:]
             self.clearData()
             self.commandState = call_with_idle
+            self.seqNumTextField.isHidden = false
         case .view_menu:
             self.deviceListView.isHidden = true
             self.startScanButton.isEnabled = false
@@ -344,7 +346,7 @@ extension ViewController{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == self.deviceListTable{
-            self.changView(.view_menu)
+            self.changeView(.view_menu)
             currentDevice = devicesList[indexPath.row]
             debugPrint("didSelectRowAt --->\(String(describing: currentDevice["peripheral"]))")
             self.contextDelegate?.connectDevice(currentDevice["peripheral"] as? CBPeripheral, with: call_with_idle, isMgdlUnit: false)

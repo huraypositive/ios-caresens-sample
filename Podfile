@@ -7,7 +7,6 @@ target 'CareSensSampleProject' do
 #  pod 'RxSwift'
 #  pod 'libCareSens'
 
-  
 
   target 'CareSensSampleProjectTests' do
     inherit! :search_paths
