@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45F005E5430A05631282A205 /* Pods_CareSensSampleProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D22E24120CC07F5B16414E2 /* Pods_CareSensSampleProject.framework */; };
 		A0081571279158810020445F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0081570279158810020445F /* AppDelegate.swift */; };
 		A0081573279158810020445F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0081572279158810020445F /* SceneDelegate.swift */; };
 		A0081575279158810020445F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0081574279158810020445F /* ViewController.swift */; };
@@ -16,6 +17,15 @@
 		A0081588279158830020445F /* CareSensSampleProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0081587279158830020445F /* CareSensSampleProjectTests.swift */; };
 		A0081592279158830020445F /* CareSensSampleProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0081591279158830020445F /* CareSensSampleProjectUITests.swift */; };
 		A0081594279158830020445F /* CareSensSampleProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0081593279158830020445F /* CareSensSampleProjectUITestsLaunchTests.swift */; };
+		A00815A82794F95E0020445F /* DeviceContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A00815A22794F95E0020445F /* DeviceContext.m */; };
+		A00815AB279536CB0020445F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00815AA279536CB0020445F /* CoreBluetooth.framework */; };
+		A00815CD2799262B0020445F /* CareSensCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A00815CB2799262B0020445F /* CareSensCoreData.xcdatamodeld */; };
+		A00815D6279927C70020445F /* Entity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A00815D4279927C70020445F /* Entity+CoreDataProperties.m */; };
+		A00815D7279927C70020445F /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = A00815D5279927C70020445F /* Entity.m */; };
+		A09068EE2799544800419C9E /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09068ED2799544800419C9E /* PersistenceManager.swift */; };
+		A09068F1279A4F2900419C9E /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = A09068F0279A4F2900419C9E /* CoreDataStack.m */; };
+		CEC39598B2C45A7ADFB76471 /* Pods_CareSensSampleProject_CareSensSampleProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE06A295574CA4CD5573415 /* Pods_CareSensSampleProject_CareSensSampleProjectUITests.framework */; };
+		E66A600A1038FE9AF749D33F /* Pods_CareSensSampleProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E263E397A599FC22C96EF3 /* Pods_CareSensSampleProjectTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07C272377570B484E84F8DB5 /* Pods-CareSensSampleProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareSensSampleProjectTests.release.xcconfig"; path = "Target Support Files/Pods-CareSensSampleProjectTests/Pods-CareSensSampleProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		189234D7E29A152B57A0CE23 /* Pods-CareSensSampleProject-CareSensSampleProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareSensSampleProject-CareSensSampleProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-CareSensSampleProject-CareSensSampleProjectUITests/Pods-CareSensSampleProject-CareSensSampleProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5CE06A295574CA4CD5573415 /* Pods_CareSensSampleProject_CareSensSampleProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareSensSampleProject_CareSensSampleProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D22E24120CC07F5B16414E2 /* Pods_CareSensSampleProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareSensSampleProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		776D63EAD4AD4B66D8239294 /* Pods-CareSensSampleProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareSensSampleProject.release.xcconfig"; path = "Target Support Files/Pods-CareSensSampleProject/Pods-CareSensSampleProject.release.xcconfig"; sourceTree = "<group>"; };
 		A008156D279158810020445F /* CareSensSampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareSensSampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0081570279158810020445F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0081572279158810020445F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +64,22 @@
 		A008158D279158830020445F /* CareSensSampleProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareSensSampleProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0081591279158830020445F /* CareSensSampleProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareSensSampleProjectUITests.swift; sourceTree = "<group>"; };
 		A0081593279158830020445F /* CareSensSampleProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareSensSampleProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A00815A02794F95E0020445F /* CareSensSampleProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CareSensSampleProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		A00815A22794F95E0020445F /* DeviceContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceContext.m; sourceTree = "<group>"; };
+		A00815A32794F95E0020445F /* DeviceContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceContext.h; sourceTree = "<group>"; };
+		A00815AA279536CB0020445F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		A00815CC2799262B0020445F /* CareSensCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CareSensCoreData.xcdatamodel; sourceTree = "<group>"; };
+		A00815D2279927C60020445F /* Entity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Entity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		A00815D3279927C60020445F /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		A00815D4279927C70020445F /* Entity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Entity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		A00815D5279927C70020445F /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
+		A09068ED2799544800419C9E /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		A09068EF279A4F2900419C9E /* CoreDataStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		A09068F0279A4F2900419C9E /* CoreDataStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		B8E263E397A599FC22C96EF3 /* Pods_CareSensSampleProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareSensSampleProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD1854EA57D71E161CE7A1F2 /* Pods-CareSensSampleProject-CareSensSampleProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareSensSampleProject-CareSensSampleProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-CareSensSampleProject-CareSensSampleProjectUITests/Pods-CareSensSampleProject-CareSensSampleProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E0267DBA141ACC86F77DC894 /* Pods-CareSensSampleProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareSensSampleProject.debug.xcconfig"; path = "Target Support Files/Pods-CareSensSampleProject/Pods-CareSensSampleProject.debug.xcconfig"; sourceTree = "<group>"; };
+		F4ECA4873587EE651AC5FD9A /* Pods-CareSensSampleProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareSensSampleProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-CareSensSampleProjectTests/Pods-CareSensSampleProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A00815AB279536CB0020445F /* CoreBluetooth.framework in Frameworks */,
+				45F005E5430A05631282A205 /* Pods_CareSensSampleProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E66A600A1038FE9AF749D33F /* Pods_CareSensSampleProjectTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +104,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC39598B2C45A7ADFB76471 /* Pods_CareSensSampleProject_CareSensSampleProjectUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		527BFD17FA8C82166947CCC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A00815AA279536CB0020445F /* CoreBluetooth.framework */,
+				5D22E24120CC07F5B16414E2 /* Pods_CareSensSampleProject.framework */,
+				5CE06A295574CA4CD5573415 /* Pods_CareSensSampleProject_CareSensSampleProjectUITests.framework */,
+				B8E263E397A599FC22C96EF3 /* Pods_CareSensSampleProjectTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		591FCFCC6934D191AEAA299A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0267DBA141ACC86F77DC894 /* Pods-CareSensSampleProject.debug.xcconfig */,
+				776D63EAD4AD4B66D8239294 /* Pods-CareSensSampleProject.release.xcconfig */,
+				189234D7E29A152B57A0CE23 /* Pods-CareSensSampleProject-CareSensSampleProjectUITests.debug.xcconfig */,
+				DD1854EA57D71E161CE7A1F2 /* Pods-CareSensSampleProject-CareSensSampleProjectUITests.release.xcconfig */,
+				F4ECA4873587EE651AC5FD9A /* Pods-CareSensSampleProjectTests.debug.xcconfig */,
+				07C272377570B484E84F8DB5 /* Pods-CareSensSampleProjectTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A0081564279158810020445F = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +142,8 @@
 				A0081586279158830020445F /* CareSensSampleProjectTests */,
 				A0081590279158830020445F /* CareSensSampleProjectUITests */,
 				A008156E279158810020445F /* Products */,
+				591FCFCC6934D191AEAA299A /* Pods */,
+				527BFD17FA8C82166947CCC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +160,24 @@
 		A008156F279158810020445F /* CareSensSampleProject */ = {
 			isa = PBXGroup;
 			children = (
+				A00815D3279927C60020445F /* Entity.h */,
+				A00815D5279927C70020445F /* Entity.m */,
+				A00815D2279927C60020445F /* Entity+CoreDataProperties.h */,
+				A00815D4279927C70020445F /* Entity+CoreDataProperties.m */,
+				A00815A32794F95E0020445F /* DeviceContext.h */,
+				A00815A22794F95E0020445F /* DeviceContext.m */,
+				A09068EF279A4F2900419C9E /* CoreDataStack.h */,
+				A09068F0279A4F2900419C9E /* CoreDataStack.m */,
 				A0081570279158810020445F /* AppDelegate.swift */,
 				A0081572279158810020445F /* SceneDelegate.swift */,
 				A0081574279158810020445F /* ViewController.swift */,
+				A09068ED2799544800419C9E /* PersistenceManager.swift */,
 				A0081576279158810020445F /* Main.storyboard */,
 				A0081579279158820020445F /* Assets.xcassets */,
 				A008157B279158820020445F /* LaunchScreen.storyboard */,
 				A008157E279158820020445F /* Info.plist */,
+				A00815A02794F95E0020445F /* CareSensSampleProject-Bridging-Header.h */,
+				A00815CB2799262B0020445F /* CareSensCoreData.xcdatamodeld */,
 			);
 			path = CareSensSampleProject;
 			sourceTree = "<group>";
@@ -134,6 +206,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0081597279158830020445F /* Build configuration list for PBXNativeTarget "CareSensSampleProject" */;
 			buildPhases = (
+				CABD9FA3C8B1995185C23479 /* [CP] Check Pods Manifest.lock */,
 				A0081569279158810020445F /* Sources */,
 				A008156A279158810020445F /* Frameworks */,
 				A008156B279158810020445F /* Resources */,
@@ -151,6 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A008159A279158830020445F /* Build configuration list for PBXNativeTarget "CareSensSampleProjectTests" */;
 			buildPhases = (
+				51D72F9E790C68E223B5FB49 /* [CP] Check Pods Manifest.lock */,
 				A008157F279158830020445F /* Sources */,
 				A0081580279158830020445F /* Frameworks */,
 				A0081581279158830020445F /* Resources */,
@@ -169,6 +243,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A008159D279158830020445F /* Build configuration list for PBXNativeTarget "CareSensSampleProjectUITests" */;
 			buildPhases = (
+				6E14EDEF69AFED5AB83F3AF9 /* [CP] Check Pods Manifest.lock */,
 				A0081589279158830020445F /* Sources */,
 				A008158A279158830020445F /* Frameworks */,
 				A008158B279158830020445F /* Resources */,
@@ -195,6 +270,7 @@
 				TargetAttributes = {
 					A008156C279158810020445F = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 					A0081582279158830020445F = {
 						CreatedOnToolsVersion = 13.0;
@@ -253,14 +329,89 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		51D72F9E790C68E223B5FB49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CareSensSampleProjectTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E14EDEF69AFED5AB83F3AF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CareSensSampleProject-CareSensSampleProjectUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CABD9FA3C8B1995185C23479 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CareSensSampleProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A0081569279158810020445F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A00815D7279927C70020445F /* Entity.m in Sources */,
 				A0081575279158810020445F /* ViewController.swift in Sources */,
 				A0081571279158810020445F /* AppDelegate.swift in Sources */,
+				A09068EE2799544800419C9E /* PersistenceManager.swift in Sources */,
+				A00815D6279927C70020445F /* Entity+CoreDataProperties.m in Sources */,
+				A00815A82794F95E0020445F /* DeviceContext.m in Sources */,
 				A0081573279158810020445F /* SceneDelegate.swift in Sources */,
+				A00815CD2799262B0020445F /* CareSensCoreData.xcdatamodeld in Sources */,
+				A09068F1279A4F2900419C9E /* CoreDataStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,9 +585,11 @@
 		};
 		A0081598279158830020445F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0267DBA141ACC86F77DC894 /* Pods-CareSensSampleProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HZ56TUJ59Y;
@@ -455,6 +608,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = test.CareSensSampleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CareSensSampleProject/CareSensSampleProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,9 +617,11 @@
 		};
 		A0081599279158830020445F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 776D63EAD4AD4B66D8239294 /* Pods-CareSensSampleProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HZ56TUJ59Y;
@@ -483,6 +640,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = test.CareSensSampleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CareSensSampleProject/CareSensSampleProject-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -490,6 +648,7 @@
 		};
 		A008159B279158830020445F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4ECA4873587EE651AC5FD9A /* Pods-CareSensSampleProjectTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +674,7 @@
 		};
 		A008159C279158830020445F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07C272377570B484E84F8DB5 /* Pods-CareSensSampleProjectTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +700,7 @@
 		};
 		A008159E279158830020445F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 189234D7E29A152B57A0CE23 /* Pods-CareSensSampleProject-CareSensSampleProjectUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -563,6 +724,7 @@
 		};
 		A008159F279158830020445F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD1854EA57D71E161CE7A1F2 /* Pods-CareSensSampleProject-CareSensSampleProjectUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -624,6 +786,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A00815CB2799262B0020445F /* CareSensCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A00815CC2799262B0020445F /* CareSensCoreData.xcdatamodel */,
+			);
+			currentVersion = A00815CC2799262B0020445F /* CareSensCoreData.xcdatamodel */;
+			path = CareSensCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A0081565279158810020445F /* Project object */;
 }
